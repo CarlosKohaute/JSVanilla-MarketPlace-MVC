@@ -25,3 +25,99 @@ html {
   color: black;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
 }
+
+.Home  h2 {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.Home > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (max-width: 350px) {
+  .Home_container {
+    justify-content: unset;
+  }
+}
+
+.cellList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 50px;
+}
+
+@media (max-width: 1220px) {
+  .cellList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .cellList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cellCardItem,
+.cellListItem {
+  font-family: 'League Gothic', sans-serif;
+  background: rgba(0,200, 255, 0.1);
+  border-radius: 10px;
+  padding: 1em;
+  width: 20rem;
+  display: flex;
+  margin-right: 1rem;
+  justify-content: space-between;
+}
+
+.cellCardItem {
+  height: 150px;
+  width: 315px;
+}
+
+.cellCardItem_photo{
+  height: 150px;
+  margin-right: -60px;
+}
+@media (max-width: 400px) {
+  .cellCardItem,
+  .cellListItem {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.cellCardItem > div,
+.cellListItem > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cellCardItem_name,
+.cellListItem_name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.cellCardItem_description,
+.cellListItem_description {
+  font-size: 1.3em;
+}
+
+.cellCardItem_price,
+.cellListItem_price {
+  color: darkviolet;
+  font-size: 1.7rem;
+}
+
+.cellListItem_photo {
+  height: 10rem;
+  margin-right: -5em;
+}
