@@ -121,3 +121,48 @@ html {
   height: 10rem;
   margin-right: -5em;
 }
+
+@media (max-width: 400px) {
+  .cellCardItem,
+  .cellListItem {
+    width: 210px;
+    height: 180px;
+  }
+}
+
+.cellCardItem > div,
+.cellListItem > div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.cellCardItem_name,
+.cellListItem_name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.cellCardItem_description,
+.cellListItem_description {
+  font-size: 1.3em;
+}
+
+.cellCardItem_price,
+.cellListItem_price {
+  color: darkviolet;
+  font-size: 1.7rem;
+}
+
+.cellListItem_photo {
+  height: 10rem;
+  margin-right: -5em;
+}
+
+.chosed_cell-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}

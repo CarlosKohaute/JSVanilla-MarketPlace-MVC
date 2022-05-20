@@ -1,7 +1,7 @@
-const baseURL = 'http://localhost:3000';
+const baseURL = 'http://localhost:3000/cells';
 
 async function findAllCells() {
-  const response = await fetch(`${baseURL}/cells`);
+  const response = await fetch(`${baseURL}`);
 
   const cells = await response.json();
 
@@ -20,8 +20,20 @@ async function findAllCells() {
     );
   });
 }
-async function findByIdCells(){
+async function findByIdCells() {
+  const id = document.querySelector('#cellId').value;
+  const response = await fetch(`${baseURL}/find-cell/${id}`);
+  const cell = await response.json();
 
+  const chosedCellDiv = document.querySelector('.chosedCell');
+  chosedCellDiv.innerHTML = `  <div class="cellCardItem">
+  <div>
+    <div class="cellCardItem_name">${cell.name}</div>
+    <div class="cellCardItem_price">R$ ${cell.price}</div>
+    <div class="cellCardItem_description">${cell.description}</div>
+  </div>
+<img class="cellCardItem_photo" src="${cell.photo}" alt="Celular ${cell.name}" />
+</div>`;
 }
 
 findAllCells();

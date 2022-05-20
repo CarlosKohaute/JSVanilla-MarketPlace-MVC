@@ -10,14 +10,16 @@
   <body>
     <section class="Home">
       <h2>Celular Escolhido:</h2>
-      <div>
-        <div class="chosedCell">
-          Digite o ID do celular e clique em "Escolher"
-        </div>
+      <div class="chosed-cell-space">
         <div>
-          <input type="number" id="cellId">
+          <input
+            type="number"
+            id="cellId"
+            placeholder="Digite o ID do celular e clique em 'Escolher'"
+          />
           <button onclick="findByIdCells()">Escolher</button>
         </div>
+        <div class="chosedCell"></div>
       </div>
       <h2>Celulares disponiveis:</h2>
       <div class="Home_container">
