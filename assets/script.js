@@ -20,5 +20,8 @@ async function findAllCells() {
     );
   });
 }
+async function findByIdCells(){
+
+}
 
 findAllCells();
